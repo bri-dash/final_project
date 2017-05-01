@@ -47,7 +47,7 @@ io.sockets.on('connection',
 		// When this user emits, client side: socket.emit('otherevent',some data);
 		socket.on('answers', function(data) {
 			// Data comes in as whatever was sent, including objects
-			console.log("Received: 'answers' " + data);
+			console.log("Received: 'answers' ");
 
 		responses.push(data);
 		console.log(responses.length);
@@ -175,31 +175,31 @@ io.sockets.on('connection',
 		 var max = Math.max(questiontotals.country, questiontotals.party, questiontotals.chill, questiontotals.basic);
 		 if(max == questiontotals.country){
 			 //play country
-			 socket.broadcast.emit("playlisturl", {
+			 socket.emit("playlisturl", {
 				 "url":"https://www.youtube.com/watch?v=3ZcGKHC0Rh8"
 			 });
 			 console.log("Playing Country");
 		 } else if(max == questiontotals.party){
 			 //play party
-			 socket.broadcast.emit("playlisturl", {
+			 socket.emit("playlisturl", {
 				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXcRXFNfZr7Tp"
 			 });
 			 console.log("Playing Party");
 		 } else if(max == questiontotals.chill){
 			 //play chill
-			 socket.broadcast.emit("playlisturl", {
+			 socket.emit("playlisturl", {
 				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX5CdVP4rz81C"
 			 });
 			 console.log("Playing Chill");
 		 } else if(max == questiontotals.basic){
 			 //play basic
-			 socket.broadcast.emit("playlisturl", {
+			 socket.emit("playlisturl", {
 				 "url":"https://www.youtube.com/watch?v=3ZcGKHC0Rh8"
 			 });
 			 console.log("Playing Basic");
 		 } else if(max == questiontotals.classic){
 			 //play basic
-			 socket.broadcast.emit("playlisturl", {
+			 socket.emit("playlisturl", {
 				 "url":"https://www.youtube.com/watch?v=3ZcGKHC0Rh8"
 			 });
 			 console.log("Playing Classic");
