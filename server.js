@@ -200,7 +200,7 @@ io.sockets.on('connection',
 		 } else if(max == questiontotals.classic){
 			 //play basic
 			 socket.emit("playlisturl", {
-				 "url":"https://www.youtube.com/watch?v=3ZcGKHC0Rh8"
+				 "url":"https://open.spotify.com/view/decades-playlists"
 			 });
 			 console.log("Playing Classic");
 		 } else {
