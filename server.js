@@ -177,12 +177,18 @@ io.sockets.on('connection',
 		 if(max == questiontotals.country){
 			 //play country
 			 socket.emit("playlisturl", {
-				 "url":"https://www.youtube.com/watch?v=3ZcGKHC0Rh8"
+				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWTkxQvqMy4WW"
+			 });
+			 socket.broadcast.emit("playlisturl", {
+				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWTkxQvqMy4WW"
 			 });
 			 console.log("Playing Country");
 		 } else if(max == questiontotals.party){
 			 //play party
 			 socket.emit("playlisturl", {
+				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXcRXFNfZr7Tp"
+			 });
+			 socket.broadcast.emit("playlisturl", {
 				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXcRXFNfZr7Tp"
 			 });
 			 console.log("Playing Party");
@@ -191,11 +197,17 @@ io.sockets.on('connection',
 			 socket.emit("playlisturl", {
 				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX5CdVP4rz81C"
 			 });
+			 socket.broadcast.emit("playlisturl", {
+				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX5CdVP4rz81C"
+			 });
 			 console.log("Playing Chill");
 		 } else if(max == questiontotals.basic){
 			 //play basic
 			 socket.emit("playlisturl", {
-				 "url":"https://www.youtube.com/watch?v=3ZcGKHC0Rh8"
+				 "url":"https://open.spotify.com/user/spotifycharts/playlist/37i9dQZEVXbLRQDuF5jeBp"
+			 });
+			 socket.broadcast.emit("playlisturl", {
+				 "url":"https://open.spotify.com/user/spotifycharts/playlist/37i9dQZEVXbLRQDuF5jeBp"
 			 });
 			 console.log("Playing Basic");
 		 } else if(max == questiontotals.classic){
