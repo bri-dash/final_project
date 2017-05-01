@@ -1,0 +1,137 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+
+  	<!-- to get rid of favicon request in console -->
+  	<link rel="shortcut icon" href="#">
+		<!-- CSS styles -->
+		<link rel="stylesheet" type="text/css" href="final_styles.css">
+		<!-- added fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Inconsolata|Muli:200,900|Roboto+Condensed:700" rel="stylesheet">
+
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="/quiz.js"></script>
+		<script type="text/javascript">
+
+
+			var socket = io.connect();
+
+			socket.on('connect', function() {
+				console.log("Connected");
+			});
+
+			socket.on('playlisturl', function(data){
+				console.log("HELLLO I AM HERRRRR");
+				window.location.href = data.url;
+			});
+
+			var sendresponses = function(responses) {
+				socket.emit('responses', responses);
+			};
+
+
+		</script>
+	</head>
+ <body>
+	 <header>
+		 <h1>What should we listen to?</h1>
+		 <h4>a playlist picker</h4>
+		 <p><b>How to use it:</b> Are you and your friends an unfortunate mix of picky and indecisive? Is no one assertive enough to make decisions about what kind of music to listen to? Allow us to pick for you. Submit your answers to the quiz when finished, and wait for everyone to complete it before clicking the finish button.</p>
+	 </header>
+
+	 <article>
+		 <h1>If you could escape to a happy place to fit the moment right now, where would you be be?</h1>
+			 <input type="radio" name="q1"  value="1">
+			 On your boat in the lake, drinking Coors Light with your fishing line in the water
+			 <br>
+			 <input type="radio" name="q1"  value="2">
+			 In a coffee shop, reading a book and sipping chai
+			 <br>
+			 <input type="radio" name="q1"  value="3">
+			 Playing flip cup, getting ready to head to Absinthe
+			 <br>
+			 <input type="radio" name="q1"  value="4">
+			 At Coachella, getting flowers woven into your hair
+			 <br>
+			 <input type="radio" name="q1"  value="4">
+			 Sitting by a bonfire with your family
+			 <br>
+	 </article>
+	 <article>
+		 <h1>What would you most like to eat or drink right now?</h1>
+			 <input type="radio" name="q2"  value="1">
+			 A frappuccino.
+			 <br>
+			 <input type="radio" name="q2"  value="2">
+			 Anything homemade.
+			 <br>
+			 <input type="radio" name="q2"  value="3">
+			 Chips and queso!
+			 <br>
+			 <input type="radio" name="q2"  value="4">
+			 Tea, or glass of wine.
+			 <br>
+			 <input type="radio" name="q2"  value="4">
+			 Steak and corn on the cob. And potatoes.
+			 <br>
+	 </article>
+	 <article>
+		 <h1>What is your favorite color?</h1>
+			 <input type="radio" name="q3"  value="1">
+			 Light blue.
+			 <br>
+			 <input type="radio" name="q3"  value="2">
+			 Gold.
+			 <br>
+			 <input type="radio" name="q3"  value="3">
+			 Cherry red.
+			 <br>
+			 <input type="radio" name="q3"  value="4">
+			 Brown.
+			 <br>
+			 <input type="radio" name="q3"  value="5">
+			 Pink.
+			 <br>
+	 </article>
+	 <article>
+		 <h1>What are you feeling right now?</h1>
+			 <input type="radio" name="q4"  value="1">
+			 I'M PUMPED UUUUUUUPPPPPPP
+			 <br>
+			 <input type="radio" name="q4"  value="2">
+			 I'm just so happy to be here. We should take a selfie to remember this moment.
+			 <br>
+			 <input type="radio" name="q4"  value="3">
+			 I feel like I need to go the gym, but I need motivation.
+			 <br>
+			 <input type="radio" name="q4"  value="4">
+			 Relaxed and content. I'm just enjoying everyone's company.
+			 <br>
+			 <input type="radio" name="q4"  value="5">
+			 Proud of my hard work! Got the job DONE!
+			 <br>
+	 </article>
+		<article>
+		 <h1>Alright straight up. Tell us about your music taste:</h1>
+			 <input type="radio" name="q5"  value="1">
+			 Top 40's, really. Anything I can sing along to.
+			 <br>
+			 <input type="radio" name="q5"  value="2">
+			 I loooove country. (Stop judging me.)
+			 <br>
+			 <input type="radio" name="q5"  value="3">
+			 Acoustic music, indie, things like that.
+			 <br>
+			 <input type="radio" name="q5"  value="4">
+			 I JUST WANNA PARTY
+			 <br>
+			 <input type="radio" name="q5"  value="5">
+			 I like the oldies, you know? The 80's were a better time.
+			 <br>
+	 </article>
+	 <input type="button" onClick="submitQuiz()" value='Submit Quiz'>
+	 <br>
+	 <input type="button" onClick="socket.emit('finish')" value='finish'>
+	 <br>
+  </body>
+</html>

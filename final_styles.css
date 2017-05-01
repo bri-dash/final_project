@@ -1,0 +1,22 @@
+html {
+  background-color: #A9BCD0;
+  padding: 20px;
+  color: #373F51;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  margin: 20px;
+}
+
+h1, h4 {
+  text-align: center;
+  font-family: 'Inconsolata', monospace;
+}
+
+article {
+  background-color: #DDDDDF;
+  margin: 20px;
+  padding: 30px;
+  width: 80%;
+}
