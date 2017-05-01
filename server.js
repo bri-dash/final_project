@@ -172,7 +172,8 @@ io.sockets.on('connection',
 		 console.log("basic: " + questiontotals.basic);
 		 console.log("classic: " + questiontotals.classic);
 
-		 var max = Math.max(questiontotals.country, questiontotals.party, questiontotals.chill, questiontotals.basic);
+		 var max = Math.max(questiontotals.country, questiontotals.party, questiontotals.chill, questiontotals.basic, questiontotals.classic);
+		 console.log("The max is:" + max);
 		 if(max == questiontotals.country){
 			 //play country
 			 socket.emit("playlisturl", {
@@ -200,6 +201,9 @@ io.sockets.on('connection',
 		 } else if(max == questiontotals.classic){
 			 //play basic
 			 socket.emit("playlisturl", {
+				 "url":"https://open.spotify.com/view/decades-playlists"
+			 });
+			 socket.broadcast.emit("playlisturl", {
 				 "url":"https://open.spotify.com/view/decades-playlists"
 			 });
 			 console.log("Playing Classic");
