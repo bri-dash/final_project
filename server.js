@@ -199,7 +199,7 @@ io.sockets.on('connection',
 			 });
 			 console.log("Playing Basic");
 		 } else if(max == questiontotals.classic){
-			 //play basic
+			 //play classic
 			 socket.emit("playlisturl", {
 				 "url":"https://open.spotify.com/view/decades-playlists"
 			 });

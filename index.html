@@ -129,9 +129,11 @@
 			 I like the oldies, you know? The 80's were a better time.
 			 <br>
 	 </article>
-	 <input type="button" onClick="submitQuiz()" value='Submit Quiz'>
+ <div class = "buttons">
+	 <input type="button" onClick="submitQuiz()" value='submit your answers' class="btn">
 	 <br>
-	 <input type="button" onClick="socket.emit('finish')" value='finish'>
+	 <input type="button" onClick="socket.emit('finish')" value='finish' class="btn">
 	 <br>
+ </div>
   </body>
 </html>

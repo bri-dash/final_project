@@ -14,9 +14,32 @@ h1, h4 {
   font-family: 'Inconsolata', monospace;
 }
 
+h4 {
+  letter-spacing: 3px;
+}
+
 article {
   background-color: #DDDDDF;
   margin: 20px;
   padding: 30px;
   width: 80%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn {
+  font-family: 'Inconsolata', monospace;
+  color: #ffffff;
+  font-size: 20px;
+  background: #101459;
+  padding: 10px 20px 10px 20px;
+}
+
+.btn:hover {
+  background: #63c3ce;
+  text-decoration: none;
 }
