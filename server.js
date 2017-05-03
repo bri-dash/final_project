@@ -177,46 +177,46 @@ io.sockets.on('connection',
 		 if(max == questiontotals.country){
 			 //play country
 			 socket.emit("playlisturl", {
-				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWTkxQvqMy4WW"
+				 "url":"https://www.youtube.com/watch?v=gvvYMxV6TmI&list=RDgvvYMxV6TmI#t=6"
 			 });
 			 socket.broadcast.emit("playlisturl", {
-				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWTkxQvqMy4WW"
+				 "url":"https://www.youtube.com/watch?v=gvvYMxV6TmI&list=RDgvvYMxV6TmI#t=6"
 			 });
 			 console.log("Playing Country");
 		 } else if(max == questiontotals.party){
 			 //play party
 			 socket.emit("playlisturl", {
-				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXcRXFNfZr7Tp"
+				 "url":"https://www.youtube.com/watch?v=lkIUnRRH6l4&list=RDlkIUnRRH6l4#t=0"
 			 });
 			 socket.broadcast.emit("playlisturl", {
-				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXcRXFNfZr7Tp"
+				 "url":"https://www.youtube.com/watch?v=lkIUnRRH6l4&list=RDlkIUnRRH6l4#t=0"
 			 });
 			 console.log("Playing Party");
 		 } else if(max == questiontotals.chill){
 			 //play chill
 			 socket.emit("playlisturl", {
-				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX5CdVP4rz81C"
+				 "url":"https://www.youtube.com/watch?v=TWcyIpul8OE&list=RDTWcyIpul8OE#t=2"
 			 });
 			 socket.broadcast.emit("playlisturl", {
-				 "url":"https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX5CdVP4rz81C"
+				 "url":"https://www.youtube.com/watch?v=TWcyIpul8OE&list=RDTWcyIpul8OE#t=2"
 			 });
 			 console.log("Playing Chill");
 		 } else if(max == questiontotals.basic){
 			 //play basic
 			 socket.emit("playlisturl", {
-				 "url":"https://open.spotify.com/user/spotifycharts/playlist/37i9dQZEVXbLRQDuF5jeBp"
+				 "url":"https://www.youtube.com/watch?v=PT2_F-1esPk&list=RDPT2_F-1esPk#t=1"
 			 });
 			 socket.broadcast.emit("playlisturl", {
-				 "url":"https://open.spotify.com/user/spotifycharts/playlist/37i9dQZEVXbLRQDuF5jeBp"
+				 "url":"https://www.youtube.com/watch?v=PT2_F-1esPk&list=RDPT2_F-1esPk#t=1"
 			 });
 			 console.log("Playing Basic");
 		 } else if(max == questiontotals.classic){
 			 //play classic
 			 socket.emit("playlisturl", {
-				 "url":"https://open.spotify.com/view/decades-playlists"
+				 "url":"https://www.youtube.com/watch?v=Lo2qQmj0_h4&list=RDLo2qQmj0_h4#t=3"
 			 });
 			 socket.broadcast.emit("playlisturl", {
-				 "url":"https://open.spotify.com/view/decades-playlists"
+				 "url":"https://www.youtube.com/watch?v=Lo2qQmj0_h4&list=RDLo2qQmj0_h4#t=3"
 			 });
 			 console.log("Playing Classic");
 		 } else {
